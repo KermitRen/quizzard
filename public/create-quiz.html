@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="css/create-quiz.css">
+    <script src="js/createQuiz.js"></script>
+</head>
+<body>
+    <div id="container">
+        <i id="backButton" class="material-icons-outlined" onclick="window.history.back()"> keyboard_return </i>
+        <h1>Create your template</h1>
+        <hr>
+        <div id ="quizTypes">
+            <div class="quizTypeContainer selectedType">
+                <img></img>
+                <p>Jeopardy</p>
+            </div>
+            <div class="quizTypeContainer">
+                <img></img>
+                <p>Coming Later</p>
+            </div>
+            <div class="quizTypeContainer">
+                <img></img>
+                <p>Coming Later</p>
+            </div>
+        </div>
+        <p class="inputLabel">Quiz name</p>
+        <input id="createInputName" type="text" autocomplete="off" spellcheck="false">
+        <p class="inputLabel">make private?</p>
+        <input id="createInputPrivate" type="checkbox">
+        <a onclick="createQuiz()" id="createButton">Create</a>
+    </div>
+</body>
+</html>

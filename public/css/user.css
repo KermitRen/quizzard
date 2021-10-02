@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  cursor: default;
+  font-size: 16px;
+  font-family: Almarai, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #715be3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#715be3), to(#34c791));
+  background-image: linear-gradient(#5c46cf, #715be3, #34c791);
+}
+
+#topSection {
+  height: 150px;
+}
+
+#topSection #logo {
+  width: 300px;
+  height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: #47dea7;
+  line-height: 150px;
+  font-size: 3em;
+  margin: 0px 50px;
+  float: left;
+}
+
+#topSection #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  float: right;
+  margin-right: 6%;
+}
+
+#topSection #navbar a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#topSection #navbar a:hover {
+  color: #47dea7;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#mainContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 150px);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#leftSection {
+  width: 50%;
+  height: 100%;
+}
+
+#leftSection h1 {
+  text-align: center;
+  font-size: 2.4vw;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#leftSection #quizList {
+  width: 80%;
+  margin: auto;
+  height: 70%;
+  background-color: #715be3;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px 10px 20px 20px;
+  overflow-y: hidden;
+}
+
+#leftSection #quizListInner {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 15px;
+  border-radius: 15px;
+}
+
+#leftSection #quizListInner::-webkit-scrollbar {
+  width: 15px;
+}
+
+#leftSection #quizListInner::-webkit-scrollbar-track {
+  background-color: #4836a8;
+  border-radius: 5px;
+}
+
+#leftSection #quizListInner::-webkit-scrollbar-thumb {
+  background-color: #34c791;
+  border-radius: 5px;
+}
+
+#leftSection .quizItem {
+  height: 120px;
+  padding: 10px 15px;
+  background-color: #5c46cf;
+  border-radius: 10px;
+  position: relative;
+  -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#leftSection .quizItem .quizTitle {
+  font-size: 2em;
+}
+
+#leftSection .quizItem .quizType {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#leftSection .quizItem .interactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#leftSection .quizItem .interactContainer i {
+  color: #47dea7;
+  border-radius: 5px;
+  background-color: #4836a8;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+#leftSection .quizItem .interactContainer i:hover span {
+  display: inline;
+}
+
+#leftSection .quizItem .interactContainer i span {
+  position: absolute;
+  color: #47dea7;
+  font-size: 10px;
+  font-weight: 600;
+  left: 50%;
+  top: -11px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  text-transform: uppercase;
+}
+
+#leftSection .quizItem .interactContainer .playIcon {
+  font-size: 2em;
+}
+
+#leftSection .quizItem .interactContainer .editIcon {
+  font-size: 1.5em;
+  padding: 4px;
+}
+
+#leftSection .quizItem .interactContainer .deleteIcon {
+  font-size: 1.8em;
+  padding: 2px;
+}
+
+#leftSection .quizItem .metaInfo {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+}
+
+#leftSection .quizItem .metaInfo p {
+  margin-top: 2px;
+  font-size: 0.95em;
+}
+
+#leftSection .quizItem:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#leftSection a {
+  text-align: center;
+  background-image: linear-gradient(170deg, #4836a8, #715be3);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: color 0.2s, background-image 0.3s;
+  transition: color 0.2s, background-image 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 30%;
+  margin-top: 45px;
+  height: 6%;
+}
+
+#leftSection a:hover {
+  color: #47dea7;
+  background-image: linear-gradient(170deg, #4836a8, #5c46cf);
+}
+
+#leftSection a:hover i, #leftSection a:hover p {
+  color: #47dea7;
+}
+
+#leftSection a i {
+  font-size: 2.15vw;
+  cursor: pointer;
+  -webkit-transition: color 0.15s;
+  transition: color 0.15s;
+}
+
+#leftSection a p {
+  font-size: 1.4vw;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: color 0.15s;
+  transition: color 0.15s;
+}
+
+#rightSection {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+#rightSection #settingsIcon {
+  color: #5c46cf;
+  font-size: 2.8em;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+/*# sourceMappingURL=user.css.map */

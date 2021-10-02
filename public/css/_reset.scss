@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    cursor: default;
+
+    font: {
+        size: 16px;
+        family: $almarai;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $quizPurple2;
+    background-image: linear-gradient($quizPurple3, $quizPurple2, $quizGreen2);
+}

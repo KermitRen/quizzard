@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="css/user.css">
+    <script src="js/user.js"></script>
+</head>
+
+<body>
+    <div id = "topSection">
+        <a id = "logo" href="home.html"> Quizzard </a>
+        <div id = "navbar">
+            <a>Explore</a>
+            <a id = "navbarUser" href="user.html">Username</a>
+            <a>Help</a>
+        </div> 
+    </div>
+    <div id = "mainContent">
+        <div id = "leftSection">
+            <h1>My Quizzes</h1>
+            <div id="quizList">
+                <div id="quizListInner">
+                    <div class="quizItem">
+                        <p class="quizTitle"> Musik Quiz 2020</p>
+                        <p class="quizType"> Jeopardy</p>
+                        <div class="interactContainer">
+                            <i class="playIcon material-icons">play_arrow <span>PLAY</span> </i>
+                            <i class="editIcon material-icons">edit <span>EDIT</span> </i>
+                        </div>
+                        <div class="metaInfo">
+                            <p>Made: Some Date</p>
+                            <p>Created by: creator name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="create-quiz.html">
+                <i class="material-icons-outlined"> add</i>
+                <p>New Quiz</p>
+            </a>
+        </div>
+        <div id = "rightSection">
+            <div id="showcase"></div>
+            <i id="settingsIcon" class="material-icons"> settings</i>
+        </div>
+
+    </div>
+</body>
+</html>

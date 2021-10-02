@@ -1,0 +1,39 @@
+#topSection {
+    height: 150px;
+
+    #logo {
+        width: 300px;
+        height: inherit;
+        text-align: center;
+        text-transform: uppercase;
+        color: $quizGreen1;
+        line-height: 150px;
+        font-size: 3em;
+        margin: 0px 50px;
+        float: left;
+    }
+
+    #navbar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        height: inherit;
+        float: right;
+        margin-right: 6%;
+
+        a {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 20px 30px;
+            margin: 0px 20px;
+            border-radius: 10px;
+            transition: color 0.3s, background-color 0.3s;
+            
+            &:hover {
+                color: $quizGreen1;
+                background-color: rgba(0,0,0,0.05);
+            }
+        }
+    }
+}

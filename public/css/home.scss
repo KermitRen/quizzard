@@ -1,0 +1,67 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+@import "reset";
+@import "navigation";
+
+#mainContent {
+    position: relative;
+    
+    > div {
+        position: absolute;
+        width: 30%;
+        top: 150px;
+        left: 25%;
+
+        #welcome {
+            font-size: 1.8em;
+        }
+
+        #title {
+            text-transform: uppercase;
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        #description {
+            font-size: 1.3em;
+            line-height: 130%;
+        }
+
+        #buttons {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-top: 80px;
+            font-size: 1em;
+
+            a {
+                @include buttonStandard;
+                width: 46%;
+            }
+
+            .disabledButton {
+                cursor: not-allowed;
+                position: relative;
+                filter:grayscale(70%);
+
+                &:hover {
+                    color: white;
+                    filter: grayscale(70%) brightness(85%);
+                    background-image: linear-gradient(170deg, $quizPurple4, $quizPurple2);
+                }
+    
+                &:hover::after {
+                    content: "Login to create a quiz";
+                    position: absolute;
+                    top: 70px;
+                    left: 20%;
+                    width: 150px;
+                    font-size: 0.8em;
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "quizName": "Musik Quiz test 1",
+    "quizType": "Jeopardy",
+    "quizData": {},
+    "quizID": "d0fb130f-e16e-4e8e-a19a-6e3d1b5bd2bf",
+    "private": true,
+    "creatorName": "Kermit Ren",
+    "date": "2021-09-11T13:48:08.091Z"
+  },
+  {
+    "quizName": "Monkey Quiz (BANANA!)",
+    "quizType": "Jeopardy",
+    "quizData": {},
+    "quizID": "fea10b6b-8ed7-4c50-9571-da14611a8909",
+    "private": true,
+    "creatorName": "Kermit Ren",
+    "date": "2021-09-29T19:48:56.055Z"
+  }
+]

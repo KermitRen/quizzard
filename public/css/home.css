@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  cursor: default;
+  font-size: 16px;
+  font-family: Almarai, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #715be3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#715be3), to(#34c791));
+  background-image: linear-gradient(#5c46cf, #715be3, #34c791);
+}
+
+#topSection {
+  height: 150px;
+}
+
+#topSection #logo {
+  width: 300px;
+  height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: #47dea7;
+  line-height: 150px;
+  font-size: 3em;
+  margin: 0px 50px;
+  float: left;
+}
+
+#topSection #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  float: right;
+  margin-right: 6%;
+}
+
+#topSection #navbar a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#topSection #navbar a:hover {
+  color: #47dea7;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#mainContent {
+  position: relative;
+}
+
+#mainContent > div {
+  position: absolute;
+  width: 30%;
+  top: 150px;
+  left: 25%;
+}
+
+#mainContent > div #welcome {
+  font-size: 1.8em;
+}
+
+#mainContent > div #title {
+  text-transform: uppercase;
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+#mainContent > div #description {
+  font-size: 1.3em;
+  line-height: 130%;
+}
+
+#mainContent > div #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px;
+  font-size: 1em;
+}
+
+#mainContent > div #buttons a {
+  text-align: center;
+  background-image: linear-gradient(170deg, #4836a8, #715be3);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: color 0.2s, background-image 0.3s;
+  transition: color 0.2s, background-image 0.3s;
+  width: 46%;
+}
+
+#mainContent > div #buttons a:hover {
+  color: #47dea7;
+  background-image: linear-gradient(170deg, #4836a8, #5c46cf);
+}
+
+#mainContent > div #buttons .disabledButton {
+  cursor: not-allowed;
+  position: relative;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#mainContent > div #buttons .disabledButton:hover {
+  color: white;
+  -webkit-filter: grayscale(70%) brightness(85%);
+          filter: grayscale(70%) brightness(85%);
+  background-image: linear-gradient(170deg, #4836a8, #715be3);
+}
+
+#mainContent > div #buttons .disabledButton:hover::after {
+  content: "Login to create a quiz";
+  position: absolute;
+  top: 70px;
+  left: 20%;
+  width: 150px;
+  font-size: 0.8em;
+}
+/*# sourceMappingURL=home.css.map */

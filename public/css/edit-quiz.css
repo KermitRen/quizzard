@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  cursor: default;
+  font-size: 16px;
+  font-family: Almarai, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #715be3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#715be3), to(#34c791));
+  background-image: linear-gradient(#5c46cf, #715be3, #34c791);
+}
+
+#topSection {
+  height: 150px;
+}
+
+#topSection #logo {
+  width: 300px;
+  height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: #47dea7;
+  line-height: 150px;
+  font-size: 3em;
+  margin: 0px 50px;
+  float: left;
+}
+
+#topSection #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  float: right;
+  margin-right: 6%;
+}
+
+#topSection #navbar a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#topSection #navbar a:hover {
+  color: #47dea7;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-image: none;
+  background-color: #5c46cf;
+}
+
+#topSection {
+  position: relative;
+  height: 10vh;
+}
+
+#topSection #backButton {
+  font-size: 3.5em;
+  color: #47dea7;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#topSection #backButton:hover {
+  background-color: #4836a8;
+  border-radius: 50%;
+  color: #34c791;
+}
+
+#topSection #quizTitle {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 3.2em;
+  width: auto;
+  border: none;
+  cursor: text;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: transparent;
+}
+
+#topSection #quizTitle:focus {
+  outline: 1px solid white;
+  border-radius: 10px;
+  background-color: #4836a8;
+}
+
+#mainContent {
+  height: 90vh;
+}
+
+#quizGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  height: inherit;
+}
+
+#quizGrid div {
+  border: 1px solid blue;
+}
+
+#quizGrid .rowPointsContainer {
+  padding: 10%;
+  border: none;
+}
+
+#quizGrid .rowPointsContainer .rowPoints {
+  border: none;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  display: block;
+  font-size: 2.4vmax;
+  font-family: Lato, sans-serif;
+  background-color: transparent;
+  text-align: center;
+  cursor: text;
+}
+
+#quizGrid .rowPointsContainer .rowPoints:focus {
+  outline: 1px solid white;
+  border-radius: 10px;
+  background-color: #4836a8;
+}
+
+#quizGrid .rowPointsContainer .rowPoints::-webkit-outer-spin-button, #quizGrid .rowPointsContainer .rowPoints::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#quizGrid .quizQuestion {
+  border: none;
+  background-color: #4836a8;
+  border-radius: 10px;
+  font-size: 2.5vmax;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=edit-quiz.css.map */

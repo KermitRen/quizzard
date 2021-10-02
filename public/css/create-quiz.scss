@@ -1,0 +1,123 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+@import "reset";
+@import "navigation";
+
+#container {
+    padding: 5%;
+    width: 1000px;
+    margin: auto;
+}
+
+#backButton {
+    @include backButton;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+hr {
+    margin: 20px 0px 50px 0px;
+}
+
+#quizTypes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+
+    .quizTypeContainer {
+        width: 25%;
+
+        img {
+            width: 100%;
+            height: 140px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+    }
+    
+    .selectedType {
+
+        img {
+            border: 1px solid $quizGreen1;
+        }
+
+        p {
+            color: $quizGreen1;
+            text-decoration: underline;
+        }
+    }
+}
+
+.inputLabel {
+    font-size: 1.5em;
+    margin-bottom: 7px;
+}
+
+input[type=text] {
+    color: black;
+    font-size: 1.4em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 35px;
+    padding-left: 10px;
+    cursor: text;
+    margin-bottom: 50px;
+}
+
+input[type=checkbox] {
+    height: 25px;
+    width: 25px;
+    appearance: none;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 120px;
+    position: relative;
+
+    &:checked {
+        filter: brightness(90%);
+        border: 2px solid $quizPurple3;
+        
+        &::after {
+            content:"X";
+            color: $quizPurple3;
+            font-size: 1.3em;
+            font-weight: 600;
+            position: absolute;
+            top: -5px;
+            left: 3.5px;
+        }
+    }
+}
+
+#checkboxContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+#createButton {
+    @include buttonStandard;
+    display: block;
+    margin: auto;
+    width: 40%;
+}

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  cursor: default;
+  font-size: 16px;
+  font-family: Almarai, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #715be3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#715be3), to(#34c791));
+  background-image: linear-gradient(#5c46cf, #715be3, #34c791);
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#5c46cf), color-stop(#715be3), color-stop(#7a64ed), to(#47dea7));
+  background-image: linear-gradient(#5c46cf, #5c46cf, #715be3, #7a64ed, #47dea7);
+  padding-top: 100px;
+  padding-left: 200px;
+}
+
+#topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+}
+
+#topBar i {
+  font-size: 3.5em;
+  color: #47dea7;
+  padding: 5px;
+  cursor: pointer;
+  position: fixed;
+  left: 65px;
+  top: 90px;
+}
+
+#topBar i:hover {
+  background-color: #4836a8;
+  border-radius: 50%;
+  color: #34c791;
+}
+
+#topBar p {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: #5c46cf;
+  cursor: pointer;
+}
+
+#topBar div {
+  width: 3px;
+  height: 45px;
+  background-color: #715be3;
+  margin: 0px 10px;
+}
+
+#topBar .selectedSection {
+  -webkit-filter: brightness(93%);
+          filter: brightness(93%);
+}
+
+.section {
+  width: 400px;
+  margin-top: 80px;
+}
+
+.section .inputLabel {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.section .inputField {
+  color: black;
+  font-size: 1.4em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  cursor: text;
+}
+
+.section a {
+  text-align: center;
+  background-image: linear-gradient(170deg, #4836a8, #715be3);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: color 0.2s, background-image 0.3s;
+  transition: color 0.2s, background-image 0.3s;
+  display: block;
+  margin: auto;
+  width: 70%;
+  margin-top: 15px;
+}
+
+.section a:hover {
+  color: #47dea7;
+  background-image: linear-gradient(170deg, #4836a8, #5c46cf);
+}
+
+.section .errorMsg {
+  color: #eb282e;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#signupSection {
+  display: none;
+  margin-top: 35px;
+}
+
+#signupSection #signupText, #signupSection #signupText2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #47dea7;
+  font-weight: 550;
+}
+
+#signupSection #signupText2 {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+#signupSection .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+#signupSection .inputContainer i {
+  position: relative;
+  margin-left: 10px;
+  font-size: 2.1em;
+  color: #47dea7;
+}
+
+#signupSection .inputContainer i:hover .inputTooltip {
+  display: block;
+}
+
+#signupSection .inputContainer .inputTooltip {
+  font-size: 1.1em;
+  display: none;
+  position: absolute;
+  padding: 10px 10px 10px 25px;
+  border-radius: 10px;
+  background-color: #5c46cf;
+  top: 0px;
+  left: 45px;
+}
+
+#signupSection .inputContainer .inputTooltip li {
+  word-spacing: 0.3em;
+}
+
+#signupSection .inputContainer .inputTooltip li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#signupSection #signupError {
+  font-size: 1.35em;
+}
+/*# sourceMappingURL=login.css.map */
