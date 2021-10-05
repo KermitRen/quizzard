@@ -10,7 +10,7 @@ function pageLoaded() {
         displayQuiz({
             "quizName": "Musik Quiz test 1",
             "quizType": "Jeopardy",
-            "quizData": {rows: 5, columns: 5, pointValues: [100, 200, 300, 400, 500]},
+            "quizData": {rows: 5, columns: 5, pointValues: [100, 200, 300, 400, 500], categories: ["Rock", "Pop", "Jazz", "Rap", "Funk"]},
             "quizID": "d0fb130f-e16e-4e8e-a19a-6e3d1b5bd2bf",
             "private": true,
             "creatorName": "Kermit Ren",
@@ -38,11 +38,10 @@ function displayQuiz(quiz) {
     let quizData = quiz.quizData;
     let grid = document.getElementById("quizGrid");
     let hSize = 100/((quizData.columns + 1) * 2);
-    let vSize = 100/((quizData.columns + 2))
+    let vSize = 100/((quizData.rows + 1) * 2 + 1);
 
     grid.style.gridTemplateColumns = (hSize + "% ") + (hSize*2 + "% ").repeat(quizData.columns);
-    grid.style.gridTemplateRows = (vSize + "% ").repeat(quizData.columns + 1);
-    //grid.style.gridTemplateRows = ((90/(quizData.rows + 1)) + "vh ").repeat(quizData.rows + 1);
+    grid.style.gridTemplateRows = (vSize + "% ") + (vSize*2 + "% ").repeat(quizData.columns);
     
     //Load Quiz Data
     for(let i = 0; i < quizData.rows + 1; i++) {
@@ -73,20 +72,30 @@ function displayQuiz(quiz) {
         //Question Columns
         for(let j = 0; j < quizData.columns; j++) {
             if(i == 0) {
-                let category = document.createElement("div");
-                category.innerHTML = "category";
+                let categoryContainer = document.createElement("div");
+                categoryContainer.className = "quizCategoryContainer";
+                grid.appendChild(categoryContainer);
+
+                let category = document.createElement("input");
                 category.className = "quizCategory";
-                grid.appendChild(category);
+                category.type = "text";
+                category.autocomplete = "off";
+                category.spellcheck = false;
+                category.value = quizData.categories[j];
+                categoryContainer.appendChild(category);
 
             } else {
+                let questionContainer = document.createElement("div");
+                questionContainer.className = "quizQuestionContainer";
+                grid.appendChild(questionContainer);
+
                 let question = document.createElement("p");
                 question.innerHTML = quizData.pointValues[i - 1];
                 question.className = "quizQuestion";
-                grid.appendChild(question);
+                questionContainer.appendChild(question);
             }
         }
 
     }
-
 
 }

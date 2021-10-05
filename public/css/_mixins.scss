@@ -15,6 +15,28 @@
     
 }
 
+@mixin editableField {
+    border: none;
+    background-color: transparent;
+    cursor: text;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: $quizPurple2;
+    }
+
+    &:focus {
+        outline: 1px solid white;
+        border-radius: 10px;
+        background-color: $quizPurple4;
+    }
+
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
 @mixin backButton {
     font-size: 3.5em;
     color: $quizGreen1;

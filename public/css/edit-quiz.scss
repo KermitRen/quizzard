@@ -22,46 +22,34 @@ body {
     }
 
     #quizTitle {
+        @include editableField;
         position: relative;
         display: block;
         text-align: center;
         margin: auto;
         font-size: 3.2em;
         width: auto;
-        border: none;
-        cursor: text;
         top: 50%;
         transform: translateY(-50%);
-        background-color: transparent;
-
-        &:focus {
-            outline: 1px solid white;
-            border-radius: 10px;
-            background-color: $quizPurple4;
-        }
     }
 }
 
 #mainContent {
-    height: 90vh;
+    padding: 5vh;
+    height: 80vh;
 }
 
 #quizGrid {
     display: grid;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
     height: inherit;
-
-    div {
-        border: 1px solid blue;
-    }
 
     .rowPointsContainer {
         padding: 10%;
-        border: none;
 
         .rowPoints {
-            border: none;
+            @include editableField;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
@@ -69,41 +57,58 @@ body {
             display: block;
             font-size: 2.4vmax;
             font-family: $lato;
-            background-color: transparent;
             text-align: center;
-            cursor: text;
-
-            &:focus {
-                outline: 1px solid white;
-                border-radius: 10px;
-                background-color: $quizPurple4;
-            }
-
-            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-            }
         }
     }
 
-    .quizQuestion {
-        border: none;
+    .quizCategoryContainer {
+
+        .quizCategory {
+            @include editableField;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: block;
+            font-size: 2.4vmax;
+            text-align: center;
+        }
+    }
+
+    .quizQuestionContainer {
         background-color: $quizPurple4;
         border-radius: 10px;
-        font-size: 2.5vmax;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
         cursor: pointer;
-        text-align: center;
-        vertical-align: middle;
+        transition: all 0.2s;
 
+        &:hover {
+            filter: brightness(85%);
+            
+            > .quizQuestion {
+                color: $quizGreen1;
+            }
+        }
+
+        .quizQuestion {
+            position: relative;
+            top: 50%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            font-size: 2.2vmax;
+            font-family: $lato;
+            text-align: center;
+            vertical-align: middle;
+            transition: all 0.2s;
+        }
     }
 
 }
 
-//quiz Questions should be wrapped in container to center text
 //question should be highlighted when hovered with no question and flipped if there is a question
 // Can remove point rows in play mode
 // Center title to questions
-//Add color 3.5?
-// Wrap category in container as well
-// create editableField mixin for title, cat and points
 //test comment
+//Save button
+//Add add/delete buttons for categories and point-rows (Functionality)
+//Add questionmark/checkmark logos for all questions to symbolize if they are done (Functionality: Gray -> Green)

@@ -2,7 +2,24 @@
   {
     "quizName": "Musik Quiz test 1",
     "quizType": "Jeopardy",
-    "quizData": {},
+    "quizData": {
+      "rows": 5,
+      "columns": 5,
+      "pointValues": [
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "categories": [
+        "Rock",
+        "Pop",
+        "Jazz",
+        "Rap",
+        "Funk"
+      ]
+    },
     "quizID": "d0fb130f-e16e-4e8e-a19a-6e3d1b5bd2bf",
     "private": true,
     "creatorName": "Kermit Ren",
@@ -11,7 +28,25 @@
   {
     "quizName": "Monkey Quiz (BANANA!)",
     "quizType": "Jeopardy",
-    "quizData": {},
+    "quizData": {
+      "rows": 5,
+      "columns": 6,
+      "pointValues": [
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "categories": [
+        "Random",
+        "Monkey",
+        "Thomas",
+        "Bananas",
+        "Chimpanzee",
+        "Gorilla"
+      ]
+    },
     "quizID": "fea10b6b-8ed7-4c50-9571-da14611a8909",
     "private": true,
     "creatorName": "Kermit Ren",
