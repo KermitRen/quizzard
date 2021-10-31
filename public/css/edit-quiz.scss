@@ -11,42 +11,65 @@ body {
 
 #topSection {
     position: relative;
-    height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 15vh;
+    padding: 0vh 5vh 0vh 3vh;
 
-    #backButton {
-        @include backButton;
-        position: absolute;
-        left: 50px;
-        top: 50%;
-        transform: translateY(-50%);
+    #backButtonContainer {
+        width: 10%;
+        position: relative;
+
+        #backButton {
+            @include backButton;
+            font-size: 4vmax;
+            position: relative;
+            top: 50%;
+            left: 25%;
+            text-align: center;
+            transform: translateY(-50%);
+        }
     }
 
-    #quizTitle {
-        @include editableField;
+    #titleContainer {
+        width: 90%;
         position: relative;
-        display: block;
-        text-align: center;
-        margin: auto;
-        font-size: 3.2em;
-        width: auto;
-        top: 50%;
-        transform: translateY(-50%);
+
+        #quizTitle {
+            @include editableField;
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3vmax;
+        }
     }
 }
 
+hr {
+    width: 95%;
+    margin: auto;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.7);
+}
+
 #mainContent {
-    padding: 5vh;
-    height: 80vh;
+    padding: 3vh 5vh 3vh 3vh;
+    height: 79vh;
 }
 
 #quizGrid {
     display: grid;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
+    align-content: space-around;
     height: inherit;
 
     .rowPointsContainer {
         padding: 10%;
+        position: relative;
 
         .rowPoints {
             @include editableField;
@@ -59,9 +82,34 @@ body {
             font-family: $lato;
             text-align: center;
         }
+
+        .pointsIconContainer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0%;
+
+            .deletePointsIcon {
+                color: $quizRed1;
+                font-size: 1.2vmax;
+                cursor: pointer;
+            }
+
+            .addPointsIcon {
+                color: $quizGreen1;
+                font-size: 1.55vmax;
+                cursor: pointer;
+                margin-right: 5%;
+            }
+        }
     }
 
     .quizCategoryContainer {
+        position: relative;
 
         .quizCategory {
             @include editableField;
@@ -73,6 +121,30 @@ body {
             font-size: 2.4vmax;
             text-align: center;
         }
+
+        .categoryIconContainer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            bottom: -35%;
+
+            .deleteCategoryIcon {
+                color: $quizRed1;
+                font-size: 1.2vmax;
+                cursor: pointer;
+            }
+
+            .addCategoryIcon {
+                color: $quizGreen1;
+                font-size: 1.55vmax;
+                cursor: pointer;
+                margin-right: 5%;
+            }
+        }
+
     }
 
     .quizQuestionContainer {
@@ -105,10 +177,175 @@ body {
 
 }
 
+.tooltip {
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $quizPurple4;
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+
+#popupContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+
+    #questionPopup {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: auto;
+        width: 70%;
+        height: 80vh;
+        background-color: $quizPurple3;
+        border-radius: 15px;
+        border: 5px solid $quizGreen1;
+    }
+}
+
+#questionHeaderContainer {
+    position: relative;
+    display: flex;
+    height: 14%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    #backButtonQuestion {
+        @include backButton;
+        font-size: 3.5vmax;
+        position: absolute;
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #questionHeader {
+        font-size: 3.2vmax;
+    }
+}
+
+#questionAnswerContainer {
+    height: 86%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .inputContainer {
+        background-color: $quizPurple1;
+        border-radius: 10px;
+        box-shadow: 7px 7px 5px rgba(0,0,0,0.1);
+        width: 45%;
+        height: 85%;
+        
+        p {
+            font-size: 2vmax;
+            text-align: center;
+            width: 100%;
+            height: 10%;
+            border-radius: 10px 10px 0 0;
+            background-color: $quizPurple4;
+            padding: 1% 0;
+        }
+
+        #questionToolbar {
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            width: 100%;
+            height: 8%; 
+
+            .toolContainer {
+                background-color: $quizPurple3;
+                position: relative;
+                height: 100%;
+                width: 8%;
+                border-right: 2px solid $quizPurple4;
+                border-bottom: 2px solid $quizPurple4;
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(85%);
+                }
+
+                i {
+                    position: relative;
+                    color: $quizGreen1;
+                    font-size: 1.5vmax;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    cursor: pointer;
+                }
+            }
+
+            .selectedTool {
+                filter: brightness(85%);
+            }
+        }
+
+        .inputFrame {
+            position: relative;
+            width: 100%;
+            height: 90%;
+            border-radius: 0 0 10px 10px;
+            border: 5px solid $quizPurple4;
+            background-color: inherit;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .textareaContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            textarea {
+                position: relative;
+                width: 90%;
+                height: 90%;
+                top: 50%;
+                margin: 0 5%;
+                transform: translateY(-50%);
+                resize: none;
+                outline: none;
+                border: none;
+                border-radius: 8px;
+                cursor: text;
+                font-size: 1.5vmax;
+                padding: 1%;
+                background-color: $quizPurple2;
+    
+                &:hover {
+                    filter: brightness(90%);
+                }
+    
+                &:focus {
+                    filter: brightness(90%);
+                }
+            }
+        }
+
+        #textInputOption {
+            height: 92%;
+        }
+
+        #imageInputOption {
+            display: none;
+        }
+
+        #audioInputOption {
+            display: none;
+        }
+    }
+}
 //question should be highlighted when hovered with no question and flipped if there is a question
 // Can remove point rows in play mode
-// Center title to questions
-//test comment
-//Save button
-//Add add/delete buttons for categories and point-rows (Functionality)
 //Add questionmark/checkmark logos for all questions to symbolize if they are done (Functionality: Gray -> Green)

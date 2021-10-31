@@ -10,13 +10,58 @@
     <link rel="stylesheet" href="css/edit-quiz.css">
     <script src="js/editQuiz.js"></script>
 </head>
-<body>
+<body id="body">
     <div id="topSection">
-        <i id="backButton" class="material-icons-outlined" onclick="window.location = 'user.html'"> keyboard_return </i>
-        <input id="quizTitle" type="text" autocomplete="off" spellcheck="false" value="Quiz Title">
+        <div id="backButtonContainer"> 
+            <i id="backButton" class="material-icons-outlined" onclick="window.location = 'user.html'"> keyboard_return </i>
+        </div>
+        <div id="titleContainer">
+            <input id="quizTitle" type="text" autocomplete="off" spellcheck="false" value="Quiz Title">
+        </div>
     </div>
+    <hr id = "hr">
     <div id="mainContent">
         <div id="quizGrid">
+        </div>
+    </div>
+    <div id = "popupContainer">
+        <div id= "questionPopup">
+            <div id="questionHeaderContainer">
+                <i id="backButtonQuestion" class="material-icons-outlined" onclick="closeQuestion()"> keyboard_return</i>
+                <p id="questionHeader"> Test Header</p>
+            </div>
+            <hr id="hrQuestion">
+            <div id="questionAnswerContainer">
+                <div class="inputContainer">
+                    <p>Question</p>
+                    <div class="inputFrame">
+                        <div id="questionToolbar">
+                            <div id="textTool" class="toolContainer selectedTool" onclick="swapTool('text')">
+                                <i class="material-icons">text_fields</i>
+                            </div>
+                            <div id="imageTool" class="toolContainer" onclick="swapTool('image')">
+                                <i class="material-icons">image</i>
+                            </div>
+                            <div id="audioTool" class="toolContainer" onclick="swapTool('audio')">
+                                <i class="material-icons">music_note</i>
+                            </div>
+                        </div>
+                        <div id="textInputOption" class="textareaContainer">
+                            <textarea autocomplete="off" spellcheck="false"></textarea>
+                        </div>
+                        <div id="imageInputOption">image</div>
+                        <div id="audioInputOption">audio</div>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <p>Answer</p>
+                    <div class="inputFrame">
+                        <div class="textareaContainer">
+                            <textarea autocomplete="off" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

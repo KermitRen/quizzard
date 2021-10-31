@@ -79,6 +79,32 @@ app.post("/create-quiz", (req, res) => {
 
 })
 
+app.post("/edit-quiz", (req,res) => {
+
+    let userData = req.body.userData;
+    let quiz = req.body.quiz;
+
+    if(verifyPassword(userData.username, userData.password)) {
+        for(let i = 0; i < quizzes.length; i++) {
+            if(quizzes[i].creatorName == userData.username && quizzes[i].quizID == quiz.quizID) {
+                quizzes[i].quizData = quiz.quizData;
+                quizzes[i].quizName = quiz.quizName;
+                fs.writeFile("data/quizzes.json", JSON.stringify(quizzes, null, 2), 'utf8', () => {});
+                res.json({status: "success"})
+                foundQuiz = true;
+            }
+        }
+        
+        if(!foundQuiz) {
+            res.json({status: "failure", err:"Could not find quiz ID"})  
+        }
+        
+    } else {
+        res.json({status: "failure", err:"Invalid user data"})
+    }
+
+})
+
 app.post("/delete-quiz", (req, res) => {
 
     let userData = req.body.userData;

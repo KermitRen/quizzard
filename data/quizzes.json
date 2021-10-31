@@ -1,6 +1,6 @@
 [
   {
-    "quizName": "Musik Quiz test 1",
+    "quizName": "Musik Quiz test ",
     "quizType": "Jeopardy",
     "quizData": {
       "rows": 5,
@@ -26,11 +26,11 @@
     "date": "2021-09-11T13:48:08.091Z"
   },
   {
-    "quizName": "Monkey Quiz (BANANA!)",
+    "quizName": "Monkey Quiz (BANANAS!)",
     "quizType": "Jeopardy",
     "quizData": {
       "rows": 5,
-      "columns": 6,
+      "columns": 5,
       "pointValues": [
         100,
         200,
@@ -39,12 +39,173 @@
         500
       ],
       "categories": [
-        "Random",
+        "Baboon",
         "Monkey",
-        "Thomas",
-        "Bananas",
+        "Langur",
         "Chimpanzee",
         "Gorilla"
+      ],
+      "questions": [
+        [
+          {
+            "question": {
+              "text": "testString1A"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString2A"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3A"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4A"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5A"
+            },
+            "answer": "testAnswer"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "testString1B"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString2B"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3B"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4B"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5B"
+            },
+            "answer": "testAnswer"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "testString1C"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString2C"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3C"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4C"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5C"
+            },
+            "answer": "testAnswer"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "testString1D"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString2D"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3D"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4D"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5D"
+            },
+            "answer": "testAnswer"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "testString1E"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString2E"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3E"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4E"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5E"
+            },
+            "answer": "testAnswer"
+          }
+        ]
       ]
     },
     "quizID": "fea10b6b-8ed7-4c50-9571-da14611a8909",
