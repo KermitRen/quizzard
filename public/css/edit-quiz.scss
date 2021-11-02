@@ -148,6 +148,7 @@ hr {
     }
 
     .quizQuestionContainer {
+        position: relative;
         background-color: $quizPurple4;
         border-radius: 10px;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
@@ -346,6 +347,28 @@ hr {
         }
     }
 }
+
+.markerContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .marker {
+        color: rgba(125,125,125,0.5);
+        font-size: 1.1vmax;
+        cursor: pointer;
+    }
+    
+    .selectedMarker {
+        color: $quizGreen1;
+    }
+}
+
 //question should be highlighted when hovered with no question and flipped if there is a question
 // Can remove point rows in play mode
 //Add questionmark/checkmark logos for all questions to symbolize if they are done (Functionality: Gray -> Green)

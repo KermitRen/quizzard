@@ -87,9 +87,9 @@
           },
           {
             "question": {
-              "text": "testString2B"
+              "text": "Who is the fattest monkey?"
             },
-            "answer": "testAnswer"
+            "answer": "Thomas Ø. Baggesen"
           },
           {
             "question": {
@@ -113,6 +113,40 @@
         [
           {
             "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "testString2R"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString3R"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString4R"
+            },
+            "answer": "testAnswer"
+          },
+          {
+            "question": {
+              "text": "testString5R"
+            },
+            "answer": "testAnswer"
+          }
+        ],
+        [
+          {
+            "question": {
               "text": "testString1C"
             },
             "answer": "testAnswer"
@@ -125,7 +159,7 @@
           },
           {
             "question": {
-              "text": "testString3C"
+              "text": "Hello?"
             },
             "answer": "testAnswer"
           },
@@ -133,7 +167,7 @@
             "question": {
               "text": "testString4C"
             },
-            "answer": "testAnswer"
+            "answer": ""
           },
           {
             "question": {
@@ -163,9 +197,9 @@
           },
           {
             "question": {
-              "text": "testString4D"
+              "text": ""
             },
-            "answer": "testAnswer"
+            "answer": ""
           },
           {
             "question": {
@@ -212,5 +246,243 @@
     "private": true,
     "creatorName": "Kermit Ren",
     "date": "2021-09-29T19:48:56.055Z"
+  },
+  {
+    "quizName": "test quiz x",
+    "quizType": "Jeopardy",
+    "quizData": {
+      "rows": 5,
+      "columns": 5,
+      "pointValues": [
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "categories": [
+        "???",
+        "???",
+        "???",
+        "???",
+        "???"
+      ],
+      "questions": [
+        [
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "what up?",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "hey",
+              "image": "",
+              "audio": ""
+            },
+            "answer": "ge"
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          },
+          {
+            "question": {
+              "text": "",
+              "image": "",
+              "audio": ""
+            },
+            "answer": ""
+          }
+        ]
+      ]
+    },
+    "quizID": "226c7e7d-e0e2-4004-96a6-d72e18e35a86",
+    "private": true,
+    "creatorName": "Kermit Ren",
+    "date": "2021-11-01T15:01:37.512Z"
   }
 ]

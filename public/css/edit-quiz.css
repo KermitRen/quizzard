@@ -314,6 +314,7 @@ hr {
 }
 
 #quizGrid .quizQuestionContainer {
+  position: relative;
   background-color: #4836a8;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -558,5 +559,35 @@ hr {
 
 #questionAnswerContainer .inputContainer #audioInputOption {
   display: none;
+}
+
+.markerContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.markerContainer .marker {
+  color: rgba(125, 125, 125, 0.5);
+  font-size: 1.1vmax;
+  cursor: pointer;
+}
+
+.markerContainer .selectedMarker {
+  color: #47dea7;
 }
 /*# sourceMappingURL=edit-quiz.css.map */

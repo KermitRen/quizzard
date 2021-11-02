@@ -62,7 +62,7 @@ app.post("/create-quiz", (req, res) => {
         let quizObject = {
             quizName: quiz.name,
             quizType: quiz.type,
-            quizData: {},
+            quizData: baseQuiz(),
             quizID: uuidv4(),
             private: quiz.private,
             creatorName: userData.username,
@@ -167,4 +167,56 @@ function userExists(username) {
 
 function verifyPassword(username, password) {
     return users[username] == password;
+}
+
+function baseQuiz() {
+    return {rows: 5,
+            columns: 5,
+            pointValues: [
+                100,
+                200,
+                300,
+                400,
+                500
+              ],
+            categories: [
+                "???",
+                "???",
+                "???",
+                "???",
+                "???"
+            ],
+            questions: [
+                  [{question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""}
+                   ],
+                  [{question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""}
+                   ],
+                  [{question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""}
+                   ],
+                  [{question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""}
+                   ],
+                  [{question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""},
+                   {question: {text: "",image:"",audio:""}, answer: ""}
+                   ],
+            ]
+            }
 }

@@ -190,6 +190,7 @@ function displayQuiz() {
                 }
 
             } else {
+                let qaObject = quiz.quizData.questions[j][i-1];
                 let questionContainer = document.createElement("div");
                 questionContainer.className = "quizQuestionContainer";
                 questionContainer.onclick = function() {openQuestion(i - 1, j)};
@@ -199,6 +200,28 @@ function displayQuiz() {
                 question.innerHTML = quizData.pointValues[i - 1];
                 question.className = "quizQuestion";
                 questionContainer.appendChild(question);
+
+                let markerContainer = document.createElement("div");
+                markerContainer.className = "markerContainer";
+                questionContainer.appendChild(markerContainer);
+
+                let questionMarker = document.createElement("i");
+                if(qaObject.question.text == "" && qaObject.question.image == "" && qaObject.question.audio == "") {
+                    questionMarker.className = "marker material-icons";
+                } else {
+                    questionMarker.className = "selectedMarker marker material-icons";
+                }
+                questionMarker.innerHTML = "help";
+                markerContainer.appendChild(questionMarker);
+
+                let answerMarker = document.createElement("i");
+                if(qaObject.answer == "") {
+                    answerMarker.className = "marker material-icons";
+                } else {
+                    answerMarker.className = "selectedMarker marker material-icons";
+                }
+                answerMarker.innerHTML = "done";
+                markerContainer.appendChild(answerMarker);
             }
         }
 
@@ -209,6 +232,7 @@ function displayQuiz() {
 function addColumn(index) {
     quiz.quizData.columns += 1;
     quiz.quizData.categories.splice(index, 0, "???");
+    quiz.quizData.questions.splice(index, 0, emptyColumn());
     displayQuiz();
     saveQuiz();
 }
@@ -216,6 +240,7 @@ function addColumn(index) {
 function removeColumn(index) {
     quiz.quizData.columns -= 1;
     quiz.quizData.categories.splice(index, 1);
+    quiz.quizData.questions.splice(index, 1);
     displayQuiz();
     saveQuiz();
 }
@@ -223,6 +248,9 @@ function removeColumn(index) {
 function addRow(index) {
     quiz.quizData.rows += 1;
     quiz.quizData.pointValues.splice(index, 0, 300);
+    for(let i = 0; i < quiz.quizData.columns;i++) {
+        quiz.quizData.questions[i].splice(index, 0, {question: {text: "", image: "", audio: ""}, answer: ""});
+    }
     displayQuiz();
     saveQuiz();
 }
@@ -230,8 +258,21 @@ function addRow(index) {
 function removeRow(index) {
     quiz.quizData.rows -= 1;
     quiz.quizData.pointValues.splice(index, 1);
+    for(let i = 0; i < quiz.quizData.columns; i++) {
+        quiz.quizData.questions[i].splice(index, 1);
+    }
     displayQuiz();
     saveQuiz();
+}
+
+function emptyColumn() {
+    return [{question: {text: "", image: "", audio: ""}, answer: ""},
+    {question: {text: "", image: "", audio: ""}, answer: ""},
+    {question: {text: "", image: "", audio: ""}, answer: ""},
+    {question: {text: "", image: "", audio: ""}, answer: ""},
+    {question: {text: "", image: "", audio: ""}, answer: ""}
+   ]
+      
 }
 
 function addTooltip(element, tooltip) {
@@ -282,6 +323,8 @@ function saveQuiz() {
 function openQuestion(row, column) {
 
     let qaObject = quiz.quizData.questions[column][row]
+    document.getElementById("questionPopup").dataset.column = column;
+    document.getElementById("questionPopup").dataset.row = row;
 
     //Blur out background
     document.getElementById("topSection").style.filter = "blur(5px) brightness(90%)";
@@ -291,11 +334,23 @@ function openQuestion(row, column) {
 
     //Show question
     document.getElementById("questionHeader").innerHTML = quiz.quizData.categories[column] + " (" + quiz.quizData.pointValues[row] + ")";
+    document.getElementById("questionTextarea").value = qaObject.question.text;
+    document.getElementById("answerTextarea").value = qaObject.answer;
     document.getElementById("popupContainer").style.display = "block";
 
 }
 
 function closeQuestion() {
+
+    row = document.getElementById("questionPopup").dataset.row;
+    column = document.getElementById("questionPopup").dataset.column;
+    let qaObject = quiz.quizData.questions[column][row];
+
+    //Save Changes
+    qaObject.question.text = document.getElementById("questionTextarea").value;
+    qaObject.answer = document.getElementById("answerTextarea").value;
+    saveQuiz();
+    displayQuiz();
 
     //Remove question
     document.getElementById("popupContainer").style.display = "none";
