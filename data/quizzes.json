@@ -1,6 +1,6 @@
 [
   {
-    "quizName": "Musik Quiz test ",
+    "quizName": "Musik Quiz 1",
     "quizType": "Jeopardy",
     "quizData": {
       "rows": 5,
@@ -14,475 +14,227 @@
       ],
       "categories": [
         "Rock",
-        "Pop",
-        "Jazz",
-        "Rap",
-        "Funk"
-      ]
-    },
-    "quizID": "d0fb130f-e16e-4e8e-a19a-6e3d1b5bd2bf",
-    "private": true,
-    "creatorName": "Kermit Ren",
-    "date": "2021-09-11T13:48:08.091Z"
-  },
-  {
-    "quizName": "Monkey Quiz (BANANAS!)",
-    "quizType": "Jeopardy",
-    "quizData": {
-      "rows": 5,
-      "columns": 5,
-      "pointValues": [
-        100,
-        200,
-        300,
-        400,
-        500
-      ],
-      "categories": [
-        "Baboon",
-        "Monkey",
-        "Langur",
-        "Chimpanzee",
-        "Gorilla"
+        "Disco",
+        "Album Covers",
+        "Musical Movies",
+        "Gaming"
       ],
       "questions": [
         [
           {
             "question": {
-              "text": "testString1A"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString2A"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString3A"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString4A"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString5A"
-            },
-            "answer": "testAnswer"
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "testString1B"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "Who is the fattest monkey?"
-            },
-            "answer": "Thomas Ø. Baggesen"
-          },
-          {
-            "question": {
-              "text": "testString3B"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString4B"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString5B"
-            },
-            "answer": "testAnswer"
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "",
+              "text": "Name the song or the artist",
               "image": "",
+              "audio": "btPJPFnesV4"
+            },
+            "answer": "Eye of the tiger - Survivor"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "m7Nioh8wq3w"
+            },
+            "answer": "Rebirthing - Skillet"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "YgRpubWunUc"
+            },
+            "answer": "Put some sugar on me - Def Leppard"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "ntG_EEfpasM"
+            },
+            "answer": "Through the fire and flames - Dragonforce"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "RAOnUF8t20w"
+            },
+            "answer": "Rusted from the rain - Billy Talent"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "htgr3pvBr-I"
+            },
+            "answer": "Hold the line - TOTO"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "Sj_9CiNkkn4"
+            },
+            "answer": "Waterloo - ABBA"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "Lrle0x_DHBM"
+            },
+            "answer": "Let's Groove - Earth, Wind & Fire"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "JYIaWeVL1JM"
+            },
+            "answer": "Rythm is a dancer - SNAP!"
+          },
+          {
+            "question": {
+              "text": "Name the song or the artist",
+              "image": "",
+              "audio": "GIAtE6ywgwA"
+            },
+            "answer": "Upside Down - Diana Ross"
+          }
+        ],
+        [
+          {
+            "question": {
+              "text": "Name the artist behind this album",
+              "image": "https://m0.joe.co.uk/wp-content/uploads/2019/07/25131416/Green-Day.jpeg",
               "audio": ""
             },
-            "answer": ""
+            "answer": "Green Day"
           },
           {
             "question": {
-              "text": "testString2R"
+              "text": "Name the artist behind this album",
+              "image": "https://img.playbuzz.com/image/upload/ar_1.5,c_pad,f_jpg,b_auto/q_auto:best,f_auto,fl_lossy,w_640,c_limit,dpr_1/cdn/3b766541-8705-458d-947a-5ce06127bea3/6819dfa6-c35e-4354-9604-fb557ab749b3.jpg",
+              "audio": ""
             },
-            "answer": "testAnswer"
+            "answer": "Sia"
           },
           {
             "question": {
-              "text": "testString3R"
+              "text": "Name the artist behind this album",
+              "image": "https://sbly-web-prod-shareably.netdna-ssl.com/wp-content/uploads/2020/02/06231508/h6.jpg.webp",
+              "audio": ""
             },
-            "answer": "testAnswer"
+            "answer": "Kansas"
           },
           {
             "question": {
-              "text": "testString4R"
+              "text": "Name the artist behind this album",
+              "image": "https://sbly-web-prod-shareably.netdna-ssl.com/wp-content/uploads/2020/02/06215523/v3.jpg.webp",
+              "audio": ""
             },
-            "answer": "testAnswer"
+            "answer": "The Who"
           },
           {
             "question": {
-              "text": "testString5R"
+              "text": "Name the artist behind this album",
+              "image": "https://img.ex.co/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1616003925/dqropxepux5okdt0aqxu.jpg",
+              "audio": ""
             },
-            "answer": "testAnswer"
+            "answer": "The Killers"
           }
         ],
         [
           {
             "question": {
-              "text": "testString1C"
+              "text": "Name the song or the musical/movie",
+              "image": "",
+              "audio": "e__Pp4FxsjU"
             },
-            "answer": "testAnswer"
+            "answer": "You're the one that i want - Grease"
           },
           {
             "question": {
-              "text": "testString2C"
+              "text": "Name the song or the musical/movie",
+              "image": "",
+              "audio": "CWnYIb2lqpo"
             },
-            "answer": "testAnswer"
+            "answer": "Another day of sun - La La Land"
           },
           {
             "question": {
-              "text": "Hello?"
+              "text": "Name the song or the musical/movie",
+              "image": "",
+              "audio": "Ic7NqP_YGlg"
             },
-            "answer": "testAnswer"
+            "answer": "My Shot - Hamilton"
           },
           {
             "question": {
-              "text": "testString4C"
+              "text": "Name the song or the musical/movie",
+              "image": "",
+              "audio": "fhGu2CDqQqo"
             },
-            "answer": ""
+            "answer": "Garbage Truck - Scott Pilgrim vs the world"
           },
           {
             "question": {
-              "text": "testString5C"
+              "text": "Name the song or the musical/movie",
+              "image": "",
+              "audio": "GimrxP2U0ZE"
             },
-            "answer": "testAnswer"
+            "answer": "The Other Side - The Greatest Showman"
           }
         ],
         [
           {
             "question": {
-              "text": "testString1D"
+              "text": "Name the game",
+              "image": "",
+              "audio": "j_vLgPptLp8"
             },
-            "answer": "testAnswer"
+            "answer": "Hearthstone"
           },
           {
             "question": {
-              "text": "testString2D"
+              "text": "Name the game",
+              "image": "",
+              "audio": "XD-OFP-0H5g"
             },
-            "answer": "testAnswer"
+            "answer": "Persona 5"
           },
           {
             "question": {
-              "text": "testString3D"
+              "text": "Name the game",
+              "image": "",
+              "audio": "qmsjvBivRkU"
             },
-            "answer": "testAnswer"
+            "answer": "Hollow Knight"
           },
           {
             "question": {
-              "text": ""
+              "text": "Name the game",
+              "image": "",
+              "audio": "PHqDH2Aewwc"
             },
-            "answer": ""
+            "answer": "Heroes of Might & Magic III"
           },
           {
             "question": {
-              "text": "testString5D"
+              "text": "Name the game",
+              "image": "",
+              "audio": "XQc6sRvuh4M"
             },
-            "answer": "testAnswer"
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "testString1E"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString2E"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString3E"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString4E"
-            },
-            "answer": "testAnswer"
-          },
-          {
-            "question": {
-              "text": "testString5E"
-            },
-            "answer": "testAnswer"
+            "answer": "Battlefield Heroes"
           }
         ]
       ]
     },
-    "quizID": "fea10b6b-8ed7-4c50-9571-da14611a8909",
+    "quizID": "12ef639a-373d-4b7a-ba9b-73403820fa53",
     "private": true,
     "creatorName": "Kermit Ren",
-    "date": "2021-09-29T19:48:56.055Z"
-  },
-  {
-    "quizName": "test quiz x",
-    "quizType": "Jeopardy",
-    "quizData": {
-      "rows": 5,
-      "columns": 5,
-      "pointValues": [
-        100,
-        200,
-        300,
-        400,
-        500
-      ],
-      "categories": [
-        "???",
-        "???",
-        "???",
-        "???",
-        "???"
-      ],
-      "questions": [
-        [
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "what up?",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "hey",
-              "image": "",
-              "audio": ""
-            },
-            "answer": "ge"
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          }
-        ],
-        [
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          },
-          {
-            "question": {
-              "text": "",
-              "image": "",
-              "audio": ""
-            },
-            "answer": ""
-          }
-        ]
-      ]
-    },
-    "quizID": "226c7e7d-e0e2-4004-96a6-d72e18e35a86",
-    "private": true,
-    "creatorName": "Kermit Ren",
-    "date": "2021-11-01T15:01:37.512Z"
+    "date": "2021-12-17T17:16:25.738Z"
   }
 ]

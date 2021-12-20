@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/play-quiz.css">
+    <script src="js/playQuiz.js"></script>
+</head>
+<body>
+    <div id="topSection">
+        <div id="backButtonContainer"> 
+            <i id="backButton" class="material-icons-outlined" onclick="window.location = 'user.html'"> keyboard_return </i>
+        </div>
+        <p id="quizTitle">Quiz Title</p>
+    </div>
+    <hr id = "hr">
+    <div id="mainContent">
+        <div id="quizGrid">
+        </div>
+    </div>
+    <div id="scoreboard">
+        <div id="teamController">
+            <i id="teamAdd" class="material-icons teamControl" onclick="addTeam()">group_add</i>
+            <i id="teamRemove" class="material-icons teamControl" onclick="removeTeam()">group_remove</i>
+        </div>
+    </div>
+</body>
+</html>

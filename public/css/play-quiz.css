@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  font-family: Almarai, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #715be3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c46cf), color-stop(#715be3), to(#34c791));
+  background-image: linear-gradient(#5c46cf, #715be3, #34c791);
+}
+
+#topSection {
+  height: 150px;
+}
+
+#topSection #logo {
+  width: 300px;
+  height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: #47dea7;
+  line-height: 150px;
+  font-size: 3em;
+  margin: 0px 50px;
+  float: left;
+}
+
+#topSection #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  float: right;
+  margin-right: 6%;
+}
+
+#topSection #navbar a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin: 0px 20px;
+  border-radius: 10px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#topSection #navbar a:hover {
+  color: #47dea7;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-image: none;
+  background-color: #5c46cf;
+}
+
+#topSection {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: calc(12vh - 2px);
+  padding-top: 1vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#topSection #backButtonContainer {
+  width: 10%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#topSection #backButtonContainer #backButton {
+  font-size: 3.5em;
+  color: #47dea7;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 4vmax;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#topSection #backButtonContainer #backButton:hover {
+  background-color: #4836a8;
+  border-radius: 50%;
+  color: #34c791;
+}
+
+#topSection #quizTitle {
+  font-size: 3vmax;
+}
+
+hr {
+  width: 95%;
+  margin: auto;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+#mainContent {
+  padding: 1% 2.5%;
+  height: 80vh;
+}
+
+#quizGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  height: 100%;
+}
+
+#quizGrid .quizCategoryContainer .quizCategory {
+  font-size: 2.4vmax;
+  text-align: center;
+}
+
+#quizGrid .quizQuestionContainer {
+  position: relative;
+  background-color: #4836a8;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#quizGrid .quizQuestionContainer:hover {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+
+#quizGrid .quizQuestionContainer:hover > .quizQuestion {
+  color: #47dea7;
+}
+
+#quizGrid .quizQuestionContainer .quizQuestion {
+  position: relative;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2.2vmax;
+  font-family: Lato, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#scoreboard {
+  position: relative;
+  height: 8vh;
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#scoreboard .teamContainer {
+  margin: 0% 4%;
+}
+
+#scoreboard .teamContainer .teamName {
+  border: none;
+  background-color: transparent;
+  cursor: text;
+  border-radius: 10px;
+  background-color: #5c46cf;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  height: 40%;
+  width: 100%;
+  display: block;
+  font-size: 1.3vmax;
+  font-weight: 300;
+  text-align: center;
+}
+
+#scoreboard .teamContainer .teamName:hover {
+  background-color: #715be3;
+}
+
+#scoreboard .teamContainer .teamName:focus {
+  outline: 1px solid white;
+  border-radius: 10px;
+  background-color: #4836a8;
+}
+
+#scoreboard .teamContainer .teamName::-webkit-outer-spin-button, #scoreboard .teamContainer .teamName::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#scoreboard .teamContainer .teamName:hover {
+  background-color: #4836a8;
+  outline: 1px solid white;
+}
+
+#scoreboard .teamContainer .scoreContainer {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#scoreboard .teamContainer .scoreContainer .addPointsIcon {
+  color: #47dea7;
+}
+
+#scoreboard .teamContainer .scoreContainer .removePointsIcon {
+  color: #ed327d;
+}
+
+#scoreboard .teamContainer .scoreContainer .pointsIcon {
+  font-size: 1.6vmax;
+  cursor: pointer;
+}
+
+#scoreboard .teamContainer .scoreContainer .pointsIcon:hover {
+  background-color: #4836a8;
+  border-radius: 50%;
+}
+
+#scoreboard .teamContainer .scoreContainer .pointText {
+  min-width: 30%;
+  font-size: 1.2vmax;
+  font-family: Lato, sans-serif;
+  text-align: center;
+}
+
+#scoreboard #teamController {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#scoreboard #teamController .teamControl {
+  font-size: 1.5vmax;
+  cursor: pointer;
+}
+
+#scoreboard #teamController #teamAdd {
+  color: #47dea7;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#scoreboard #teamController #teamRemove {
+  color: #ed327d;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+/*# sourceMappingURL=play-quiz.css.map */

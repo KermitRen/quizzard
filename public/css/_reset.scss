@@ -5,6 +5,13 @@
     color: white;
     cursor: default;
 
+    //Remove blue highligh when double-clicking
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    -o-user-select: none;
+    user-select: none;
+
     font: {
         size: 16px;
         family: $almarai;

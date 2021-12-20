@@ -7,6 +7,11 @@
   margin: 0px;
   color: white;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   font-size: 16px;
   font-family: Almarai, sans-serif;
 }

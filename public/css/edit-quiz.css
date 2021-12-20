@@ -7,6 +7,11 @@
   margin: 0px;
   color: white;
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   font-size: 16px;
   font-family: Almarai, sans-serif;
 }
@@ -554,11 +559,115 @@ hr {
 }
 
 #questionAnswerContainer .inputContainer #imageInputOption {
+  height: 92%;
   display: none;
 }
 
+#questionAnswerContainer .inputContainer #imageInputOption #imageInputImageContainer {
+  height: 88%;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#questionAnswerContainer .inputContainer #imageInputOption #imageInputImageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 #questionAnswerContainer .inputContainer #audioInputOption {
+  height: 92%;
   display: none;
+}
+
+#questionAnswerContainer .inputContainer #audioInputOption #audioInputImageContainer {
+  height: 88%;
+  width: 100%;
+  padding: 2%;
+}
+
+#questionAnswerContainer .inputContainer #audioInputOption #audioInputImageContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer {
+  height: 12%;
+  padding-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input {
+  border: none;
+  background-color: transparent;
+  cursor: text;
+  border-radius: 10px;
+  font-size: 1.2vmax;
+  font-weight: 400;
+  background-color: #5c46cf;
+  height: 100%;
+  width: 80%;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input:hover {
+  background-color: #715be3;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input:focus {
+  outline: 1px solid white;
+  border-radius: 10px;
+  background-color: #4836a8;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input::-webkit-outer-spin-button, #questionAnswerContainer .inputContainer .linkInputContainer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input:hover {
+  background-color: #5c46cf;
+  outline: 1px solid white;
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#questionAnswerContainer .inputContainer .linkInputContainer input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .markerContainer {

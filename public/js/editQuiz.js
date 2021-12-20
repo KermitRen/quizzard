@@ -335,6 +335,10 @@ function openQuestion(row, column) {
     //Show question
     document.getElementById("questionHeader").innerHTML = quiz.quizData.categories[column] + " (" + quiz.quizData.pointValues[row] + ")";
     document.getElementById("questionTextarea").value = qaObject.question.text;
+    document.getElementById("imageLinkText").value = qaObject.question.image;
+    reloadImage();
+    document.getElementById("audioLinkText").value = qaObject.question.audio;
+    reloadAudio();
     document.getElementById("answerTextarea").value = qaObject.answer;
     document.getElementById("popupContainer").style.display = "block";
 
@@ -349,6 +353,8 @@ function closeQuestion() {
     //Save Changes
     qaObject.question.text = document.getElementById("questionTextarea").value;
     qaObject.answer = document.getElementById("answerTextarea").value;
+    qaObject.question.image = document.getElementById("imageLinkText").value;
+    qaObject.question.audio = document.getElementById("audioLinkText").value;
     saveQuiz();
     displayQuiz();
 
@@ -382,5 +388,22 @@ function swapTool(tool) {
     }else if(tool == "audio") {
         document.getElementById("audioTool").className = "toolContainer selectedTool";
         document.getElementById("audioInputOption").style.display = "block";
+    }
+}
+
+function reloadImage() {
+    if(document.getElementById("imageLinkText").value != "") {
+        document.getElementById("questionImage").src = document.getElementById("imageLinkText").value;
+    } else {
+        document.getElementById("questionImage").removeAttribute("src");
+    }
+}
+
+function reloadAudio() {
+    if(document.getElementById("audioLinkText").value != "") {
+        let youtubeLink = "https://www.youtube.com/embed/" + document.getElementById("audioLinkText").value;
+        document.getElementById("questionAudio").src = youtubeLink;
+    } else {
+        document.getElementById("questionAudio").removeAttribute("src");
     }
 }

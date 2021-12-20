@@ -49,8 +49,24 @@
                         <div id="textInputOption" class="textareaContainer">
                             <textarea id="questionTextarea" autocomplete="off" spellcheck="false"></textarea>
                         </div>
-                        <div id="imageInputOption">image</div>
-                        <div id="audioInputOption">audio</div>
+
+                        <div id="imageInputOption">
+                            <div class="linkInputContainer">
+                                <input id="imageLinkText" type="text" autocomplete="off" spellcheck="false" placeholder="Insert image link" onchange="reloadImage()">
+                            </div>
+                            <div id="imageInputImageContainer">
+                                <img id="questionImage">
+                            </div>
+                        </div>
+
+                        <div id="audioInputOption">
+                            <div class="linkInputContainer">
+                                <input id="audioLinkText" type="text" autocomplete="off" spellcheck="false" placeholder="Insert youtube-video ID" onchange="reloadAudio()">
+                            </div>
+                            <div id="audioInputImageContainer">
+                                <iframe id="questionAudio"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="inputContainer">

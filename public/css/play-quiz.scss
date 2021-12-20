@@ -1,0 +1,189 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+@import "reset";
+@import "navigation";
+
+body {
+    background-image: none;
+    background-color: $quizPurple3;
+}
+
+#topSection {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    height: calc(12vh - 2px);
+    padding-top: 1vh;
+    justify-content: center;
+    align-items: center;
+
+    #backButtonContainer {
+        width: 10%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+
+        #backButton {
+            @include backButton;
+            font-size: 4vmax;
+            position: relative;
+            top: 50%;
+            left: 25%;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+    }
+
+    #quizTitle {
+        font-size: 3vmax;
+    }
+}
+
+hr {
+    width: 95%;
+    margin: auto;
+    border: none;
+    border-top: 2px solid rgba(255,255,255,0.7);
+}
+
+#mainContent {
+    padding: 1% 2.5%;
+    height: 80vh;
+}
+
+#quizGrid {
+    display: grid;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 100%;
+
+    .quizCategoryContainer {
+        .quizCategory {
+            font-size: 2.4vmax;
+            text-align: center;
+        }
+    }
+
+    .quizQuestionContainer {
+        position: relative;
+        background-color: $quizPurple4;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            filter: brightness(85%);
+            
+            > .quizQuestion {
+                color: $quizGreen1;
+            }
+        }
+
+        .quizQuestion {
+            position: relative;
+            top: 50%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            font-size: 2.2vmax;
+            font-family: $lato;
+            text-align: center;
+            vertical-align: middle;
+            transition: all 0.2s;
+        }
+    }
+}
+
+#scoreboard {
+    position: relative;
+    height: 8vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .teamContainer {
+        margin: 0% 4%;
+
+        .teamName {
+            @include editableField;
+            background-color: $quizPurple3;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+            filter: brightness(85%);
+            height: 40%;
+            width: 100%;
+            display: block;
+            font-size: 1.3vmax;
+            font-weight: 300;
+            text-align: center;
+
+            &:hover {
+                background-color: $quizPurple4;
+                outline: 1px solid white;
+            }
+        }
+
+        .scoreContainer {
+            position: relative;
+            height: 60%;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .addPointsIcon {
+                color: $quizGreen1;
+            }
+
+            .removePointsIcon {
+                color: $quizRed1;
+            }
+
+            .pointsIcon {
+                font-size: 1.6vmax;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $quizPurple4;
+                    border-radius: 50%;
+                }
+            }
+
+
+            .pointText {
+                min-width: 30%;
+                font-size: 1.2vmax;
+                font-family: $lato;
+                text-align: center;
+            }
+        }
+    }
+
+    #teamController {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+
+        .teamControl {
+            font-size: 1.5vmax;
+            cursor: pointer;
+        }
+
+        #teamAdd {
+            color: $quizGreen1;
+            align-self: flex-start;
+        }
+
+        #teamRemove {
+            color: $quizRed1;
+            align-self: flex-end;
+        }
+    }
+}

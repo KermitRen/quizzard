@@ -61,6 +61,7 @@ function displayQuizzes(quizzes) {
         let playButton = document.createElement("i");
         playButton.className = "playIcon material-icons"
         playButton.innerHTML = "play_arrow"
+        playButton.onclick = function () {window.location = "".concat("play-quiz.html?id=",quiz.quizID);}
         buttonContainer.appendChild(playButton);
 
         let playButtonToolTip = document.createElement("span");
