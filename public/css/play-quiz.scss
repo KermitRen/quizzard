@@ -72,7 +72,7 @@ hr {
         border-radius: 10px;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
         cursor: pointer;
-        transition: all 0.2s;
+        transition: filter 0.2s, transform 0.5s;
 
         &:hover {
             filter: brightness(85%);
@@ -186,4 +186,68 @@ hr {
             align-self: flex-end;
         }
     }
+}
+
+#qaContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0vw;
+    height: 0vh;
+    background-color: $quizPurple3; 
+    transition: all 0.35s;
+    overflow: hidden;
+
+    #qaHeader {
+        height: 10%;
+        border: 1px solid red;
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+  
+        #qaExit {
+            width: 10%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            border: 1px solid blue;
+
+            i {
+                @include backButton;
+                font-size: 4vmax;
+                position: relative;
+                top: 50%;
+                left: 25%;
+                text-align: center;
+                transform: translateY(-50%);
+            }
+        }
+
+        #qaTitle {
+            font-size: 2.5vmax;
+        }
+    }
+
+    .qaElementContainer {
+        height: 90%;
+        width: 100%;
+        padding: 1% 2.5%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid green;
+
+        p {
+            font-size: 3.5vmax;
+        }
+    }
+
+    #qaAnswerContainer {
+        display: none;
+    }
+
 }

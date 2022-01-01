@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", pageLoaded);
+document.addEventListener("keydown", showAnswer);
 
 var quiz;
 const defaultNoOfTeams = 2;
@@ -65,7 +66,12 @@ function displayQuiz() {
 
                 let questionContainer = document.createElement("div");
                 questionContainer.className = "quizQuestionContainer";
-                questionContainer.onclick = function() {console.log(question.text + answer)};
+                questionContainer.onclick = function() {
+                    console.log(question.text + answer);
+                    document.getElementById("qaTitle").innerHTML = quizData.categories[j] + " for " + quizData.pointValues[i];
+                    loadQAData(question, answer);
+                    showQA(true);
+                };
                 grid.appendChild(questionContainer);
 
                 let questionText = document.createElement("p");
@@ -137,6 +143,62 @@ function addTeam() {
 function removeTeam() {
     let scoreboard = document.getElementById("scoreboard");
     scoreboard.removeChild(scoreboard.lastChild);
+}
+
+function showQA(show) {
+
+    let qaContainer = document.getElementById("qaContainer");
+    if(show) {
+        qaContainer.style.width = "100vw";
+        qaContainer.style.height = "100vh";
+        qaContainer.style.top = "0";
+        qaContainer.style.left = "0";
+    } else {
+        qaContainer.style.width = "0vw";
+        qaContainer.style.height = "0vh";
+        qaContainer.style.top = "50%";
+        qaContainer.style.left = "50%";
+    }
+}
+
+function loadQAData(question, answer) {
+
+    //Remove Old Elements
+    let qaQuestion = document.getElementById("qaQuestionContainer");
+    while (qaQuestion.firstChild != null) {
+        qaQuestion.removeChild(qaQuestion.lastChild);
+    }
+
+    let qaAnswer = document.getElementById("qaAnswerContainer");
+    while (qaAnswer.firstChild != null) {
+        qaAnswer.removeChild(qaAnswer.lastChild);
+    }
+    
+    //Load Question Text
+    if(question.text != "") {
+        let questionText = document.createElement("p");
+        questionText.innerHTML = question.text;
+        qaQuestion.appendChild(questionText);
+    }
+
+    //Load Answer Text
+    if(answer != "") {
+        let answerText = document.createElement("p");
+        answerText.innerHTML = answer;
+        qaAnswer.appendChild(answerText);
+    }
+}
+
+function showAnswer(e) {
+    if(e.code == "Space") {
+        let qaContainer = document.getElementById("qaContainer");
+        console.log("test1");
+        if(qaContainer.style.width == "100vw") {
+            console.log("test2");
+            document.getElementById("qaQuestionContainer").style.display = "none";
+            document.getElementById("qaAnswerContainer").style.display = "flex";
+        }
+    }
 }
 
 function getDummyQuiz() {

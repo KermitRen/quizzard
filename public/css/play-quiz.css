@@ -171,8 +171,10 @@ hr {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: -webkit-filter 0.2s, -webkit-transform 0.5s;
+  transition: -webkit-filter 0.2s, -webkit-transform 0.5s;
+  transition: filter 0.2s, transform 0.5s;
+  transition: filter 0.2s, transform 0.5s, -webkit-filter 0.2s, -webkit-transform 0.5s;
 }
 
 #quizGrid .quizQuestionContainer:hover {
@@ -331,5 +333,97 @@ hr {
   color: #ed327d;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+#qaContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0vw;
+  height: 0vh;
+  background-color: #5c46cf;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  overflow: hidden;
+}
+
+#qaContainer #qaHeader {
+  height: 10%;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#qaContainer #qaHeader #qaExit {
+  width: 10%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border: 1px solid blue;
+}
+
+#qaContainer #qaHeader #qaExit i {
+  font-size: 3.5em;
+  color: #47dea7;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 4vmax;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#qaContainer #qaHeader #qaExit i:hover {
+  background-color: #4836a8;
+  border-radius: 50%;
+  color: #34c791;
+}
+
+#qaContainer #qaHeader #qaTitle {
+  font-size: 2.5vmax;
+}
+
+#qaContainer .qaElementContainer {
+  height: 90%;
+  width: 100%;
+  padding: 1% 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid green;
+}
+
+#qaContainer .qaElementContainer p {
+  font-size: 3.5vmax;
+}
+
+#qaContainer #qaAnswerContainer {
+  display: none;
 }
 /*# sourceMappingURL=play-quiz.css.map */
